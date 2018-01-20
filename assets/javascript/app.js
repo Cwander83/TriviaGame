@@ -1,87 +1,59 @@
 //starting with a array 
 //=========================================================
-var questionOne = {
-    //1 great white
+//JavaScript Page for a shark base trivia game
+var panel = $("#quiz-area");
 
-    question: "Name this Shark?",
+var questions = [{
+        //1 great white
+        question: "Name this Shark?",
+        answers: ["Black tip Reef Shark", "Great White Shark", "Nurse Shark", "Lemon Shark"],
+        correctAnswer: "Great White Shark",
+        video: "assets/images/greatwhite.mov",
+    },
+    //2 mako shark
+    {
+        question: "Name this Shark?",
+        answers: ["Shortfin Mako Shark", "Angel Shark", "Gobin Shark", "Cookiecutter Shark"],
+        correctAnswer: "Shortfin Mako Shark",
+        video: "assets/images/makoshark.mov",
+    },
+    //3 nurse shark
+    {
+        question: "Name this Shark?",
+        answers: ["Salmon Shark", "Great White Shark", "Bull Shark", "Nurse Shark"],
+        correctAnswer: "Nurse Shark",
+        video: "assets/images/nurseshark.mov"
+    },
+    //4 hockey sharks
+    {
+        question: "Name this Shark?",
+        answers: ["San Jose Sharks", "Hammerhead Shark", "Lemon Shark", "Tiger Shark"],
+        correctAnswer: "San Jose Sharks",
+        image: "assets/images/hockeyshark.jpg",
+    },
+    //5 tiger shark
+    {
+        question: "Name this Shark?",
+        answers: ["Tiger Shark", "Salmon Shark", "Black Tip Reef Shark", "Blue Shark"],
+        correctAnswer: "Tiger Shark",
+        video: "assets/images/tigershark.mov",
+    },
+    //6 bull shark
+    {
+        question: "Name this Shark?",
+        answers: ["Whale Shark", "Six-Gilled Shark", "Bull Shark", "Basking Shark"],
+        correctAnswer: "Bull Shark",
+        video: "assets/images/bullshark.mov",
+    },
+    //7 hammerhead shark
+    {
+        question: "Name this Shark?",
+        answers: ["Lemon Shark", "Hammerhead Shark", "Shortfin Mako Shark", "Gobin Shark"],
+        correctAnswer: "Hammerhead Shark",
+        video: "assets/images/hammerhead.mov",
+    }
+];
 
-    a: ["A: black tip reef shark", false],
-    b: ["B: great white shark", true],
-    c: ["C: nurse shark", false],
-    d: ["D: lemon shark", false],
-
-    video: "assets/images/greatwhite.mov",
-};
-//2 mako shark
-var questionTwo = {
-    question: "Name this Shark?",
-
-    a: ["A: shortfin mako shark", true],
-    b: ["B: angel shark", false],
-    c: ["C: gobin shark", false],
-    d: ["D: cookiecutter shark", false],
-
-    video: "assets/images/makoshark.mov",
-};
-//3 nurse shark
-var questionThree = {
-    question: "Name this Shark?",
-
-    a: ["A: salmon shark", false],
-    b: ["B: great white shark", false],
-    c: ["C: bull shark", false],
-    d: ["D: nurse shark", true],
-
-    video: "assets/images/nurseshark.mov"
-};
-//4 hockey sharks
-var questionFour = {
-    question: "Name this Shark?",
-
-    a: ["A: san jose sharks", true],
-    b: ["B: hammerhead shark", false],
-    c: ["C: lemon shark", false],
-    d: ["D: tiger shark", false],
-
-    image: "assets/images/hockeyshark.jpg",
-};
-//5 tiger shark
-var questionFive = {
-    question: "Name this Shark?",
-
-    a: ["A: tiger shark", true],
-    b: ["B: salmon shark", false],
-    c: ["C: black tip reef shark", false],
-    d: ["D: blue shark", false],
-
-    video: "assets/images/tigershark.mov",
-};
-//6 bull shark
-var questionSix = {
-    question: "Name this Shark?",
-
-    a: ["A: whale shark", false],
-    b: ["B: six-gilled shark", false],
-    c: ["C: bull shark", true],
-    d: ["D: basking shark", false],
-
-    video: "assets/images/bullshark.mov",
-};
-//7 hammerhead shark
-var questionSeven = {
-    question: "Name this Shark?",
-
-    a: ["A: lemon shark", false],
-    b: ["B: hammerhead shark", true],
-    c: ["C: shortfin mako shark", false],
-    d: ["D: gobin shark", false],
-
-    video: "assets/images/hammerhead.mov",
-};
-
-
-
-console.log("first" + questionSix.video);
 
 
 
@@ -110,7 +82,7 @@ for (var i = 0; i < questionArray.length; i++) {
 //===============================================
 
 function displayVidImg() {
-    $(".imgvid").attr("src",questionOne.video);
+    $(".imgvid").attr("src", questionOne.video);
 }
 //
 //function nextQuestion()
