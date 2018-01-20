@@ -54,6 +54,36 @@ var questions = [{
     }
 ];
 
+var timer;
+var countStartNumber = 60;
+
+var game = {
+    questions: questions,
+    currentQuestions: 0,
+    counter: countStartNumber,
+    correct: 0,
+    incorrect: 0,
+
+    countdown: function () {},
+
+    loadQuestion: function () {},
+
+    nextQuestion: function () {},
+
+    timeUp: function () {},
+
+    results: function () {},
+
+    clicked: function () {},
+
+    answeredIncorrectly: function () {},
+
+    answeredCorrectly: function () {},
+
+    reset: function () {}
+};
+
+
 
 
 
