@@ -54,8 +54,6 @@ var questions = [{
     }
 ];
 
-
-
 //vars i think i will use
 //==============================================
 
@@ -84,7 +82,7 @@ var game = {
         panel.html("<h2>" + questions[this.currentQuestion].question + "</h2>");
 
         for (var i = 0; i < questions[this.currentQuestion].answers.length; i++) {
-            panel.append("<button class='btn btn-info' id='button' data-name='" + questions[this.currentQuestion].answers[i] +
+            panel.append("<button class='answer-button' id='button' data-name='" + questions[this.currentQuestion].answers[i] +
                 "'>" + questions[this.currentQuestion].answers[i] + "</button>");
         }
     },
@@ -103,3 +101,8 @@ var game = {
 
     reset: function () {}
 };
+
+$(document).on("click", '#start', function () {
+    $('#sub-wrapper').prepend("<h2>time remaining: <span id='counter-number'>60>/span> seconds<h2>");
+    game.loadQuestion.bind(game)();
+});
